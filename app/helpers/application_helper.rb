@@ -1,10 +1,4 @@
 module ApplicationHelper
-	def name_brief(first_name, last_name)
-		if first_name.length > 0
-			"#{first_name[0]}.#{last_name[0]}."
-		end
-	end
-
 
 	def average_position_age_diff(pos, age, players)	
 		positions_total_nums = {} #total number of each position
