@@ -7,10 +7,3 @@ json.array! @players.each do |player|
 	json.age player['age']
 	json.average_position_age_diff average_position_age_diff(player['position'], player['age'], @players)
 end
-
-
-
-
-
-
-

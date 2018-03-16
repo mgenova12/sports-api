@@ -1,6 +1,12 @@
 module ApplicationHelper
+	def name_brief(first_name, last_name)
+		if first_name.length > 0
+			"#{first_name[0]}.#{last_name[0]}."
+		end
+	end
 
-	def average_position_age_diff(pos, age)	
+
+	def average_position_age_diff(pos, age, players)	
 		positions_total_nums = {} #total number of each position
 		positions_total_ages = {} #total ages of each positions
 		player_num = nil  #total number for that players postion
@@ -9,7 +15,7 @@ module ApplicationHelper
 
 		return nil if !age  
 
-		@baseball_players.each do |player|
+		players.each do |player|
 			position = player['position']
 			if player['age']
 			
