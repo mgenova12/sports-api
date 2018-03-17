@@ -5,5 +5,5 @@ json.array! @players.each do |player|
 	json.last_name player['lastname']
 	json.position player['position']
 	json.age player['age']
-	json.average_position_age_diff average_position_age_diff(player['position'], player['age'], @players)
+	json.average_position_age_diff average_position_age_diff(player['position'], player['age'])
 end
